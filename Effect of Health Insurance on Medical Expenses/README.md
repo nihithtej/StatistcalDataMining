@@ -6,9 +6,11 @@ The data set contains data of a random sample of 10,089 people on how much they 
 The Dependent Variable - medexpense is right skewed and is not normally distributed. Therefore, is not suitable for OLS regression model. Log transformation can be applied to make the variable closer to normal.
 
 ## Best three Regression Models 
-lm1 =lm(logmedexpense~healthins+age+female+income+illnesses+lowincome+educyr +private+verygood+good+fair +poor+poverty+midincome+msa+prioritylist,hi)
-lm2 = lm(logmedexpense~healthins+age+female+illnesses+lowincome+educyr +private+verygood+good+fair+poor+poverty+midincome+msa+prioritylist,hi)
-lm3 <- lmrob(logmedexpense~healthins+age+female+illnesses+lowincome+educyr +private+verygood+good+fair+poor+poverty+midincome+msa+prioritylist, data=hi)
+lm1 =lm(logmedexpense ~ healthins+age+female+income+illnesses+lowincome+educyr +private+verygood+good+fair +poor+poverty+midincome+msa+prioritylist,hi)
+
+lm2 = lm(logmedexpense ~ healthins+age+female+illnesses+lowincome+educyr +private+verygood+good+fair+poor+poverty+midincome+msa+prioritylist,hi)
+
+lm3 = lmrob(logmedexpense ~ healthins+age+female+illnesses+lowincome+educyr +private+verygood+good+fair+poor+poverty+midincome+msa+prioritylist, data=hi)
 
 ## Insights ##
 ### Do people with health insurance have higher or lower medical expense than people without health insurance, when other variables are controlled? By how much? Why do you think this happens?
